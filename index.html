@@ -10,14 +10,27 @@
     <div class="container">
       <div class="team">
         <div class="team--body">
-          <h1 class="team__title">Team <span class="team__name">1</span></h1>
-          <p class="team__score">0</p>
+          <h1 class="team__title">Team <span class="team__name--1">1</span></h1>
+          <p class="team__score--1">0</p>
           <div class="team__addScore">
-            <button class="button--plus__one">+1</button>
-            <button class="button--plus__two">+2</button>
-            <button class="button--plus__three">+3</button>
+            <button class="hosts--plus__one">+1</button>
+            <button class="hosts--plus__two">+2</button>
+            <button class="hosts--plus__three">+3</button>
           </div>
-          <button class="button--delete">Delete</button>
+          <button class="hosts--delete">Delete</button>
+        </div>
+      </div>
+      <button class="btn--winner">Pick the winner</button>
+      <div class="team">
+        <div class="team--body">
+          <h1 class="team__title">Team <span class="team__name--2">2</span></h1>
+          <p class="team__score--2">0</p>
+          <div class="team__addScore">
+            <button class="guests--plus__one">+1</button>
+            <button class="guests--plus__two">+2</button>
+            <button class="guests--plus__three">+3</button>
+          </div>
+          <button class="guests--delete">Delete</button>
         </div>
       </div>
       <!-- <div id="team2">
@@ -32,6 +45,7 @@
         </div>
       </div> -->
     </div>
+    <h3 class="winner"></h3>
     <script src="script.js"></script>
   </body>
 </html>

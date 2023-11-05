@@ -21,54 +21,59 @@ let playing = true;
 let sum1 = 0;
 let sum2 = 0;
 
-if (playing) {
-  plusHosts.addEventListener("click", function () {
-    sum1 += 1;
-    teamScore1.textContent = sum1;
-  });
+const init = function () {
+  if (playing) {
+    plusHosts.addEventListener("click", function () {
+      sum1 += 1;
+      teamScore1.textContent = sum1;
+    });
 
-  plusTwoHosts.addEventListener("click", function () {
-    sum1 += 2;
-    teamScore1.textContent = sum1;
-  });
+    plusTwoHosts.addEventListener("click", function () {
+      sum1 += 2;
+      teamScore1.textContent = sum1;
+    });
 
-  plusThreeHosts.addEventListener("click", function () {
-    sum1 += 3;
-    teamScore1.textContent = sum1;
-  });
+    plusThreeHosts.addEventListener("click", function () {
+      sum1 += 3;
+      teamScore1.textContent = sum1;
+    });
 
-  btnDeleteHosts.addEventListener("click", function () {
-    sum1 = 0;
-    teamScore1.textContent = sum1;
-  });
+    btnDeleteHosts.addEventListener("click", function () {
+      sum1 = 0;
+      teamScore1.textContent = sum1;
+    });
 
-  plusGuests.addEventListener("click", function () {
-    sum2 += 1;
-    teamScore2.textContent = sum2;
-  });
+    plusGuests.addEventListener("click", function () {
+      sum2 += 1;
+      teamScore2.textContent = sum2;
+    });
 
-  plusTwoGuests.addEventListener("click", function () {
-    sum2 += 2;
-    teamScore2.textContent = sum2;
-  });
+    plusTwoGuests.addEventListener("click", function () {
+      sum2 += 2;
+      teamScore2.textContent = sum2;
+    });
 
-  plusThreeGuests.addEventListener("click", function () {
-    sum2 += 3;
-    teamScore2.textContent = sum2;
-  });
+    plusThreeGuests.addEventListener("click", function () {
+      sum2 += 3;
+      teamScore2.textContent = sum2;
+    });
 
-  btnDeleteGuests.addEventListener("click", function () {
-    sum2 = 0;
-    teamScore2.textContent = sum2;
-  });
-}
+    btnDeleteGuests.addEventListener("click", function () {
+      sum2 = 0;
+      teamScore2.textContent = sum2;
+    });
+  }
+};
+
+init();
 
 btnWinner.addEventListener("click", function () {
   playing = false;
   if (sum1 > sum2) {
     winnerShow.textContent = `Hosts have won`;
   } else if (sum1 < sum2) {
-    winnerShow.textContent = `Hosts has won`;
+    winnerShow.textContent = `Guests have won`;
   } else winnerShow.textContent = `Draw`;
-  console.log(playing);
+  sum1 = sum2 = 0;
+  teamScore1.textContent = teamScore2.textContent = 0;
 });

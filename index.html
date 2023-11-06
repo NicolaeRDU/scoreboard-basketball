@@ -8,44 +8,36 @@
   </head>
   <body>
     <div class="container">
-      <div class="team">
+      <div class="team" id="team--1">
         <div class="team--body">
           <h1 class="team__title">Team <span class="team__name--1">1</span></h1>
           <p class="team__score--1">0</p>
           <div class="team__addScore">
-            <button class="hosts--plus__one">+1</button>
-            <button class="hosts--plus__two">+2</button>
-            <button class="hosts--plus__three">+3</button>
+            <button class="btn hosts--plus-one">+1</button>
+            <button class="btn hosts--plus-two">+2</button>
+            <button class="btn hosts--plus-three">+3</button>
           </div>
           <button class="hosts--delete">Delete</button>
         </div>
       </div>
-      <button class="btn--winner">Pick the winner</button>
-      <div class="team">
+      <div class="buttons">
+        <button class="btn--winner">Pick the winner</button>
+        <button class="btn--reset">Reset</button>
+      </div>
+      <div class="team" id="team--2">
         <div class="team--body">
           <h1 class="team__title">Team <span class="team__name--2">2</span></h1>
           <p class="team__score--2">0</p>
           <div class="team__addScore">
-            <button class="guests--plus__one">+1</button>
-            <button class="guests--plus__two">+2</button>
-            <button class="guests--plus__three">+3</button>
+            <button class="btn guests--plus-one">+1</button>
+            <button class="btn guests--plus-two">+2</button>
+            <button class="btn guests--plus-three">+3</button>
           </div>
           <button class="guests--delete">Delete</button>
         </div>
       </div>
-      <!-- <div id="team2">
-        <h1></h1>
-        <div class="team2__score">
-          <p>0</p>
-        </div>
-        <div class="team2__addScore">
-          <button>+1</button>
-          <button>+2</button>
-          <button>+3</button>
-        </div>
-      </div> -->
     </div>
-    <h3 class="winner"></h3>
+    <h3 class="winnerAnnouncement"></h3>
     <script src="script.js"></script>
   </body>
 </html>
